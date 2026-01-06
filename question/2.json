@@ -1,0 +1,128 @@
+{
+  "packId": 2,
+  "name": "Paket Advanced",
+  "description": "Soal menengah untuk melatih ketajaman Peserta SGC 2026",
+  "level": "Medium",
+  "questions": [
+    {
+      "cat": "IPA",
+      "q": "Gas yang paling banyak terdapat di atmosfer bumi adalah...",
+      "o": ["Oksigen", "Nitrogen", "Karbon Dioksida", "Hidrogen"],
+      "a": 1
+    },
+    {
+      "cat": "IPA",
+      "q": "Proses perubahan zat cair menjadi gas pada suhu selain titik didih disebut...",
+      "o": ["Kondensasi", "Evaporasi", "Sublimasi", "Distilasi"],
+      "a": 1
+    },
+    {
+      "cat": "IPA",
+      "q": "Hukum Archimedes menyatakan bahwa benda yang dicelupkan ke dalam zat cair akan mengalami gaya ke atas sebesar...",
+      "o": ["Berat benda", "Volume benda", "Berat zat cair yang dipindahkan", "Tekanan zat cair"],
+      "a": 2
+    },
+    {
+      "cat": "IPS",
+      "q": "Tokoh yang dikenal sebagai Bapak Koperasi Indonesia adalah...",
+      "o": ["Ir. Soekarno", "Moh. Hatta", "Sutan Syahrir", "Ki Hajar Dewantara"],
+      "a": 1
+    },
+    {
+      "cat": "IPS",
+      "q": "Perjanjian Linggarjati ditandatangani antara Indonesia dan...",
+      "o": ["Belanda", "Inggris", "Jepang", "Amerika Serikat"],
+      "a": 0
+    },
+    {
+      "cat": "IPS",
+      "q": "Sistem ekonomi yang menekankan kebebasan individu dalam berusaha disebut...",
+      "o": ["Ekonomi Terpimpin", "Ekonomi Campuran", "Ekonomi Liberal", "Ekonomi Tradisional"],
+      "a": 2
+    },
+    {
+      "cat": "IPS",
+      "q": "Gunung tertinggi di dunia adalah...",
+      "o": ["Kilimanjaro", "Everest", "Elbrus", "Andes"],
+      "a": 1
+    },
+    {
+      "cat": "WAWASAN",
+      "q": "Pasal 27 ayat (1) UUD 1945 mengatur tentang...",
+      "o": ["Hak atas pekerjaan", "Hak atas pendidikan", "Hak atas kesehatan", "Hak atas kebebasan beragama"],
+      "a": 0
+    },
+    {
+      "cat": "WAWASAN",
+      "q": "Lambang sila ke-4 Pancasila adalah...",
+      "o": ["Bintang", "Rantai", "Pohon Beringin", "Kepala Banteng"],
+      "a": 3
+    },
+    {
+      "cat": "WAWASAN",
+      "q": "Bhinneka Tunggal Ika berarti...",
+      "o": ["Berbeda-beda tetapi tetap satu", "Satu bangsa satu bahasa", "Persatuan dalam kesamaan", "Kesatuan dalam perbedaan agama"],
+      "a": 0
+    },
+    {
+      "cat": "WAWASAN",
+      "q": "Lembaga negara yang berwenang menguji undang-undang terhadap UUD adalah...",
+      "o": ["MPR", "DPR", "Mahkamah Konstitusi", "Mahkamah Agung"],
+      "a": 2
+    },
+    {
+      "cat": "BUDAYA",
+      "q": "Candi Borobudur terletak di provinsi...",
+      "o": ["Jawa Barat", "Jawa Tengah", "Yogyakarta", "Jawa Timur"],
+      "a": 1
+    },
+    {
+      "cat": "BUDAYA",
+      "q": "Tari Kecak berasal dari daerah...",
+      "o": ["Bali", "Aceh", "Sumatera Barat", "Sulawesi Selatan"],
+      "a": 0
+    },
+    {
+      "cat": "BUDAYA",
+      "q": "Rumah adat Tongkonan berasal dari suku...",
+      "o": ["Dayak", "Toraja", "Minangkabau", "Bugis"],
+      "a": 1
+    },
+    {
+      "cat": "BUDAYA",
+      "q": "Angklung diakui UNESCO sebagai warisan budaya dari daerah...",
+      "o": ["Jawa Barat", "Jawa Tengah", "Bali", "Sumatera Utara"],
+      "a": 0
+    },
+    {
+      "cat": "EKRAF",
+      "q": "Industri film termasuk subsektor ekonomi kreatif bidang...",
+      "o": ["Musik", "Seni Pertunjukan", "Media", "Film, Animasi, Video"],
+      "a": 3
+    },
+    {
+      "cat": "EKRAF",
+      "q": "Startup yang bergerak di bidang transportasi online termasuk subsektor...",
+      "o": ["Aplikasi", "Kuliner", "Desain Produk", "Kriya"],
+      "a": 0
+    },
+    {
+      "cat": "SDGs",
+      "q": "Tujuan ke-5 SDGs adalah...",
+      "o": ["Kesetaraan Gender", "Air Bersih", "Energi Bersih", "Pekerjaan Layak"],
+      "a": 0
+    },
+    {
+      "cat": "SDGs",
+      "q": "Tujuan ke-14 SDGs adalah...",
+      "o": ["Kehidupan Laut", "Kehidupan Darat", "Aksi Iklim", "Kemitraan Global"],
+      "a": 0
+    },
+    {
+      "cat": "SDGs",
+      "q": "Agenda SDGs dicanangkan oleh organisasi internasional bernama...",
+      "o": ["WHO", "UNESCO", "PBB", "ASEAN"],
+      "a": 2
+    }
+  ]
+}
