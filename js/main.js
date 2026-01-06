@@ -329,7 +329,7 @@ function showFinalResult() {
     const percentage = (score / maxScore) * 100;
     
     let rank = "PEJUANG";
-    if (percentage >= 90) rank = "SMAGA GENIUS 🥇";
+    if (percentage >= 90) rank = "CENDEKIAWAN UNGGUL 🥇";
     else if (percentage >= 70) rank = "STRATEGIS MUDA 🥈";
     else if (percentage >= 50) rank = "PEJUANG TANGGUH 🥉";
     else if (percentage >= 30) rank = "PEMULA BERBAKAT";
