@@ -1,0 +1,68 @@
+{
+  "packId": 1,
+  "name": "Paket Basic",
+  "description": "Soal dasar untuk pemula dari berbagai mata pelajaran",
+  "level": "Easy",
+  "questions": [
+    {
+      "cat": "IPA",
+      "q": "Bagian darah yang berfungsi untuk pembekuan darah adalah...",
+      "o": ["Plasma Darah", "Trombosit", "Leukosit", "Eritrosit"],
+      "a": 1
+    },
+    {
+      "cat": "WAWASAN",
+      "q": "Lagu daerah 'Lir Ilir' merupakan warisan budaya dari...",
+      "o": ["Jawa Timur", "Jawa Tengah", "Jawa Barat", "Madura"],
+      "a": 1
+    },
+    {
+      "cat": "IPS",
+      "q": "Garis lintang 0 derajat disebut juga sebagai garis...",
+      "o": ["Bujur", "Khatulistiwa", "Meridian", "Lintang Utara"],
+      "a": 1
+    },
+    {
+      "cat": "SDGs",
+      "q": "Berapa total target utama (Goals) dalam agenda SDGs 2030?",
+      "o": ["15", "16", "17", "18"],
+      "a": 2
+    },
+    {
+      "cat": "BUDAYA",
+      "q": "Senjata tradisional Rencong berasal dari daerah...",
+      "o": ["Aceh", "Riau", "Palembang", "Lampung"],
+      "a": 0
+    },
+    {
+      "cat": "EKRAF",
+      "q": "Aplikasi e-commerce termasuk dalam subsektor ekonomi kreatif...",
+      "o": ["Kuliner", "Aplikasi", "Kriya", "Desain"],
+      "a": 1
+    },
+    {
+      "cat": "IPA",
+      "q": "Bunyi yang frekuensinya di atas 20.000 Hz disebut...",
+      "o": ["Infrasonik", "Audiosonik", "Ultrasonik", "Supersonik"],
+      "a": 2
+    },
+    {
+      "cat": "WAWASAN",
+      "q": "Siapakah pencipta lambang negara Burung Garuda?",
+      "o": ["Moh. Hatta", "Sultan Hamid II", "Mr. Soepomo", "Raden Saleh"],
+      "a": 1
+    },
+    {
+      "cat": "IPS",
+      "q": "Benua yang dijuluki sebagai Benua Hitam adalah...",
+      "o": ["Eropa", "Amerika", "Afrika", "Australia"],
+      "a": 2
+    },
+    {
+      "cat": "IPA",
+      "q": "Alat untuk mengukur tekanan udara adalah...",
+      "o": ["Termometer", "Barometer", "Higrometer", "Anemometer"],
+      "a": 1
+    }
+  ]
+}
