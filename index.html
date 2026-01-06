@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Wuizzizzz - Website Quiz Online</title>
+    
+    <!-- Meta Tags & SEO -->
+    <meta name="description" content="Simulasi SGC 2026 paling canggih untuk pejuang SMAN 3 Blitar. Developed by ZAM ZAM.">
+    <meta name="author" content="ZAM ZAM">
+    <meta property="og:title" content="SGC 2026 Ultimate Simulator">
+    <meta property="og:description" content="Asah mental juaramu menuju SGC 2026!">
+    <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/802/802353.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/802/802353.png">
+    
+    <!-- External Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Local JS (Defer untuk performa) -->
+    <script src="js/questions.js" defer></script>
+    <script src="js/utils.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body class="flex flex-col min-h-screen">
+    <!-- Login Screen -->
+    <div id="login-screen" class="fixed inset-0 z-50 bg-white flex flex-col items-center justify-center p-4 md:p-8">
+        <div class="w-20 h-20 md:w-24 md:h-24 mb-4 md:mb-6 bg-gradient-to-br from-green-400 to-emerald-600 rounded-3xl flex items-center justify-center shadow-lg transform -rotate-6 hover:rotate-0 transition-transform duration-300">
+            <img src="https://cdn-icons-png.flaticon.com/512/3261/3261154.png" class="w-12 h-12 md:w-16 md:h-16" alt="Owl Logo">
+        </div>
+        <h1 class="text-2xl md:text-3xl font-extrabold text-gray-800 mb-1">Wuizzizzz</h1>
+        <p class="text-gray-400 font-bold mb-4 md:mb-6 text-center uppercase tracking-widest text-[10px] md:text-xs">Website Quiz Terbuka</p>
+        
+        <!-- Tutorial Dropdown -->
+        <div class="w-full max-w-xs md:max-w-sm mb-4 md:mb-6">
+            <div class="tutorial-dropdown bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-100 rounded-2xl overflow-hidden">
+                <button id="tutorial-toggle" class="w-full p-3 md:p-4 flex items-center justify-between text-blue-600 font-black text-xs md:text-sm uppercase hover:bg-blue-100 transition-colors">
+                    <span class="flex items-center gap-2">
+                        <span class="text-lg">💡</span> Petunjuk Penggunaan
+                    </span>
+                    <span id="tutorial-chevron" class="transform transition-transform duration-300">▼</span>
+                </button>
+                <div id="tutorial-content" class="hidden p-3 md:p-4 pt-0 border-t border-blue-100">
+                    <div class="space-y-2 text-blue-500 text-[10px] md:text-xs leading-relaxed">
+                        <p><b>🎯 Cara Bermain:</b></p>
+                        <ol class="list-decimal pl-4 space-y-1">
+                            <li>Masukkan nama Anda untuk dimulai</li>
+                            <li>Pilih paket soal yang ingin dikerjakan</li>
+                            <li>Jawab setiap soal dalam waktu <b>60 detik</b></li>
+                            <li>Jika benar, dapat <b>+2 poin</b> dan lanjut otomatis</li>
+                            <li>Jika salah, soal akan masuk ke mode <b>tebus dosa</b></li>
+                            <li>Hasilkan skor tertinggi dan rebut tahta juara!</li>
+                        </ol>
+                        <p class="pt-2"><b>🔥 Tips:</b> Fokus, jangan menyerah, dan manfaatkan mode tebus dosa untuk memperbaiki kesalahan!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Paket Soal Selection -->
+        <div class="w-full max-w-xs md:max-w-sm mb-4 md:mb-6">
+            <div class="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-100 rounded-2xl p-3 md:p-4">
+                <h4 class="text-green-600 font-black text-xs md:text-sm mb-2 uppercase">📚 PILIH PAKET SOAL</h4>
+                <div class="grid grid-cols-3 gap-2" id="question-pack-selector">
+                    <!-- Pilihan paket akan di-generate oleh JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Nama -->
+        <div class="w-full max-w-xs md:max-w-sm space-y-3 md:space-y-4">
+            <input type="text" id="user-name" placeholder="NAMA KAMU" 
+                class="w-full p-3 md:p-4 border-2 border-gray-200 rounded-2xl text-center font-bold outline-none focus:border-green-400 focus:ring-2 focus:ring-green-200 transition-all uppercase placeholder:text-gray-300 text-sm md:text-base">
+            <button onclick="attemptLogin()" 
+                class="w-full py-3 md:py-4 duo-btn btn-green rounded-2xl font-black text-base md:text-lg uppercase tracking-wider hover:brightness-110 transition-all duration-200 shadow-lg">
+                Mulai Tempur 🚀
+            </button>
+        </div>
+        
+        <footer class="mt-auto py-4 md:py-6 text-[9px] md:text-[10px] font-bold text-gray-300 uppercase tracking-widest">
+            WUIZZIZZ • Version 0.0.3 • Developed by ZAM ZAM
+        </footer>
+    </div>
+
+    <!-- Main Quiz Screen -->
+    <div id="quiz-screen" class="hidden flex flex-col h-screen">
+        <!-- Progress Header -->
+        <header class="p-3 md:p-4 flex items-center gap-3 border-b border-gray-100 bg-white sticky top-0 z-10">
+            <button onclick="location.reload()" class="text-gray-400 hover:text-red-500 text-xl font-bold transition-colors p-2">✕</button>
+            <div class="flex-grow">
+                <div class="flex justify-between items-center mb-1">
+                    <span id="display-name" class="text-[9px] font-black text-green-600 uppercase truncate max-w-[100px] md:max-w-none"></span>
+                    <span id="streak-text" class="text-[9px] font-black text-orange-500 uppercase">SKOR: 0</span>
+                </div>
+                <div class="h-2 md:h-3 bg-gray-100 rounded-full overflow-hidden">
+                    <div id="progress-bar" class="h-full bg-gradient-to-r from-green-500 to-emerald-600 transition-all duration-500" style="width: 0%"></div>
+                </div>
+            </div>
+            <div class="text-xl animate-pulse">🦉</div>
+        </header>
+
+        <!-- Question Body -->
+        <main class="flex-grow overflow-y-auto px-4 md:px-6 py-4 md:py-6 flex flex-col">
+            <div class="mb-3 md:mb-4 flex justify-between items-center">
+                <span id="q-category" class="bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-600 px-3 py-1 rounded-full font-black uppercase text-[10px] tracking-tighter"></span>
+                <div id="timer-display" class="text-2xl md:text-3xl font-black text-gray-200 bg-gray-800 rounded-xl px-3 py-1 min-w-[60px] text-center">60</div>
+            </div>
+            
+            <div class="flex-grow flex flex-col">
+                <h2 id="q-text" class="text-lg md:text-xl font-bold text-gray-800 mb-6 leading-tight flex-grow"></h2>
+                
+                <!-- Options Container -->
+                <div id="options-container" class="space-y-2 md:space-y-3 mb-4"></div>
+                
+                <!-- Action Button Container (Tetap di bawah soal) -->
+                <div class="mt-auto pt-4 border-t border-gray-100">
+                    <button id="main-action-btn" disabled onclick="handleAction()" 
+                        class="w-full py-3 md:py-4 duo-btn btn-gray rounded-2xl font-black text-base md:text-lg uppercase transition-all shadow-md">
+                        Pilih Jawaban
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Sticky Footer -->
+        <footer id="footer-action" class="sticky-footer p-4 md:p-6 bg-white border-t-2 border-gray-100 flex flex-col items-center">
+            <div id="feedback-area" class="hidden mb-3 md:mb-4 flex items-center gap-3 md:gap-4 w-full animate-fadeIn">
+                <div id="feedback-icon" class="w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center text-lg md:text-xl shadow-md"></div>
+                <div class="flex-grow">
+                    <h3 id="feedback-title" class="font-black text-sm md:text-base"></h3>
+                    <p id="feedback-sub" class="text-[10px] md:text-[11px] font-bold text-gray-400"></p>
+                </div>
+            </div>
+            <p class="text-[8px] md:text-[9px] font-black text-gray-300 uppercase tracking-widest text-center">Fokus dan terus Semangat 🔥 • Paket: <span id="current-pack-name">-</span></p>
+        </footer>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="result-screen" class="hidden fixed inset-0 bg-white z-40 flex flex-col items-center justify-center p-4 md:p-6 text-center overflow-y-auto">
+        <!-- Watermarks -->
+        <div class="watermark top-5 md:top-10 left-4 md:left-10 transform -rotate-45">Developed by ZAM ZAM</div>
+        <div class="watermark bottom-5 md:bottom-10 right-4 md:right-10 transform -rotate-45">Developed by ZAM ZAM</div>
+        <div class="watermark top-1/2 left-1/4 opacity-5">Developed by ZAM ZAM</div>
+
+        <div class="w-full max-w-md">
+            <h2 class="text-lg md:text-xl font-black text-gray-400 mb-4 md:mb-6 uppercase tracking-widest">PAPAN PERINGKAT</h2>
+            
+            <div class="flex items-end justify-center gap-2 md:gap-3 mb-6 md:mb-10 h-32 md:h-40">
+                <div class="flex flex-col items-center">
+                    <div class="text-[9px] md:text-[10px] font-black text-gray-400 mb-1">JUARA 2</div>
+                    <div class="w-12 md:w-16 bg-gradient-to-t from-gray-300 to-gray-200 rounded-t-xl shadow-md" style="height: 50px;"></div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div id="rank-name" class="text-[9px] md:text-[10px] font-black text-yellow-600 mb-1 truncate max-w-[120px]"></div>
+                    <div class="w-16 md:w-20 bg-gradient-to-t from-yellow-400 to-yellow-300 rounded-t-xl shadow-lg border-x-4 border-yellow-500" style="height: 80px;"></div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="text-[9px] md:text-[10px] font-black text-orange-400 mb-1">JUARA 3</div>
+                    <div class="w-12 md:w-16 bg-gradient-to-t from-orange-300 to-orange-200 rounded-t-xl shadow-md" style="height: 40px;"></div>
+                </div>
+            </div>
+
+            <div class="mb-6 md:mb-10 relative">
+                <div class="relative inline-block">
+                    <h1 id="final-score" class="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mb-2"></h1>
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-20"></div>
+                </div>
+                <p id="final-rank" class="text-base md:text-lg font-black text-gray-700 uppercase italic mb-3 md:mb-4">LEVEL: PEMULA</p>
+                
+                <!-- Result Quote -->
+                <div class="mt-3 md:mt-4 p-3 md:p-4 bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl border-2 border-gray-100 max-w-xs mx-auto shadow-sm">
+                    <p id="result-quote" class="text-[10px] md:text-[11px] text-gray-500 font-bold leading-relaxed italic">
+                        "Kemenangan bukan akhir, tapi awal dari tantangan yang lebih besar."
+                    </p>
+                </div>
+            </div>
+
+            <div id="redemption-box" class="hidden w-full max-w-xs mb-4 md:mb-6 p-3 md:p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl border-2 border-purple-200 animate-pulse shadow-md">
+                <p class="text-purple-600 font-black text-[10px] md:text-xs mb-2 md:mb-3 uppercase tracking-tighter flex items-center justify-center gap-2">
+                    <span class="text-lg">✨</span> KESEMPATAN TERAKHIR
+                </p>
+                <button onclick="startRedemption()" class="w-full py-2 md:py-3 duo-btn btn-purple rounded-xl font-bold text-sm uppercase shadow-lg">
+                    Tebus Dosa (<span id="wrong-count">0</span> Soal)
+                </button>
+            </div>
+
+            <div class="space-y-3 md:space-y-4">
+                <button onclick="location.reload()" 
+                    class="w-full py-3 md:py-4 duo-btn btn-blue rounded-2xl font-black text-base md:text-lg uppercase tracking-wider shadow-lg hover:brightness-110 transition-all">
+                    Main Lagi Dengan Paket Lain
+                </button>
+                <button onclick="restartSamePack()" 
+                    class="w-full py-2 md:py-3 duo-btn btn-green rounded-xl font-bold text-sm uppercase tracking-wider shadow-md">
+                    Ulangi Paket Ini
+                </button>
+            </div>
+            
+            <p class="mt-6 md:mt-8 text-[8px] md:text-[9px] font-black text-gray-400 uppercase tracking-[0.2em]">Developed by ZAM ZAM • Wuizzizzz v0.0.3</p>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="hidden fixed inset-0 bg-white bg-opacity-90 z-50 flex flex-col items-center justify-center">
+        <div class="w-16 h-16 md:w-20 md:h-20 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mb-4"></div>
+        <p class="text-gray-600 font-bold text-sm md:text-base animate-pulse">Memuat soal...</p>
+    </div>
+</body>
+</html>
