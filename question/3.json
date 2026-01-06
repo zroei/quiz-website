@@ -1,0 +1,128 @@
+{
+  "packId": 3,
+  "name": "Paket HOTS",
+  "description": "Soal sulit dengan penalaran dan opsi mengecoh",
+  "level": "Hard",
+  "questions": [
+    {
+      "cat": "IPA",
+      "q": "Jika sebuah benda bergerak dengan kecepatan konstan, maka gaya total yang bekerja padanya adalah...",
+      "o": ["Sama dengan massanya", "Sama dengan percepatannya", "Nol", "Tidak dapat ditentukan"],
+      "a": 2
+    },
+    {
+      "cat": "IPA",
+      "q": "Zat yang paling berperan dalam efek rumah kaca adalah...",
+      "o": ["Oksigen", "Nitrogen", "Karbon Dioksida", "Hidrogen"],
+      "a": 2
+    },
+    {
+      "cat": "IPA",
+      "q": "Jika larutan memiliki pH = 3, maka sifat larutan tersebut adalah...",
+      "o": ["Basa kuat", "Asam kuat", "Netral", "Asam lemah"],
+      "a": 1
+    },
+    {
+      "cat": "IPA",
+      "q": "Bagian tumbuhan yang berfungsi utama menyerap air dan mineral adalah...",
+      "o": ["Batang", "Daun", "Akar rambut", "Xilem"],
+      "a": 2
+    },
+    {
+      "cat": "IPS",
+      "q": "Tokoh yang mengusulkan dasar negara dengan nama 'Pancasila' pertama kali adalah...",
+      "o": ["Moh. Hatta", "Ir. Soekarno", "Mr. Soepomo", "Ki Bagus Hadikusumo"],
+      "a": 1
+    },
+    {
+      "cat": "IPS",
+      "q": "Perjanjian Renville ditandatangani di atas kapal perang milik negara...",
+      "o": ["Belanda", "Amerika Serikat", "Inggris", "Australia"],
+      "a": 1
+    },
+    {
+      "cat": "IPS",
+      "q": "Konsep 'supply and demand' dalam ekonomi menjelaskan hubungan antara...",
+      "o": ["Produksi dan konsumsi", "Harga dan jumlah barang", "Ekspor dan impor", "Pendapatan dan pengeluaran"],
+      "a": 1
+    },
+    {
+      "cat": "IPS",
+      "q": "Benua yang memiliki jumlah negara terbanyak adalah...",
+      "o": ["Asia", "Afrika", "Eropa", "Amerika"],
+      "a": 1
+    },
+    {
+      "cat": "WAWASAN",
+      "q": "Pasal 30 UUD 1945 mengatur tentang...",
+      "o": ["Pendidikan", "Pertahanan dan Keamanan", "Kesehatan", "Kebebasan Pers"],
+      "a": 1
+    },
+    {
+      "cat": "WAWASAN",
+      "q": "Lambang sila ke-3 Pancasila adalah...",
+      "o": ["Pohon Beringin", "Rantai", "Bintang", "Kepala Banteng"],
+      "a": 0
+    },
+    {
+      "cat": "WAWASAN",
+      "q": "Semboyan 'Bhinneka Tunggal Ika' berasal dari bahasa...",
+      "o": ["Sansekerta", "Jawa Kuno", "Melayu", "Arab"],
+      "a": 0
+    },
+    {
+      "cat": "WAWASAN",
+      "q": "Lembaga negara yang berwenang mengangkat dan memberhentikan hakim agung adalah...",
+      "o": ["MPR", "DPR", "Presiden", "Komisi Yudisial"],
+      "a": 2
+    },
+    {
+      "cat": "BUDAYA",
+      "q": "Tari Topeng Cirebon berasal dari provinsi...",
+      "o": ["Jawa Barat", "Jawa Tengah", "Banten", "DKI Jakarta"],
+      "a": 0
+    },
+    {
+      "cat": "BUDAYA",
+      "q": "Rumah adat Honai berasal dari daerah...",
+      "o": ["Papua", "Sulawesi", "Maluku", "Kalimantan"],
+      "a": 0
+    },
+    {
+      "cat": "BUDAYA",
+      "q": "Alat musik tradisional Kolintang berasal dari...",
+      "o": ["Sulawesi Utara", "Sumatera Barat", "Bali", "NTT"],
+      "a": 0
+    },
+    {
+      "cat": "BUDAYA",
+      "q": "Subsektor ekonomi kreatif yang berkaitan dengan pembuatan kerajinan tangan adalah...",
+      "o": ["Kriya", "Arsitektur", "Desain Produk", "Kuliner"],
+      "a": 0
+    },
+    {
+      "cat": "SDGs",
+      "q": "Tujuan ke-6 SDGs adalah...",
+      "o": ["Air Bersih dan Sanitasi", "Energi Bersih", "Kesetaraan Gender", "Pekerjaan Layak"],
+      "a": 0
+    },
+    {
+      "cat": "SDGs",
+      "q": "Tujuan ke-8 SDGs adalah...",
+      "o": ["Pekerjaan Layak dan Pertumbuhan Ekonomi", "Kesetaraan Gender", "Energi Bersih", "Aksi Iklim"],
+      "a": 0
+    },
+    {
+      "cat": "SDGs",
+      "q": "Tujuan ke-15 SDGs adalah...",
+      "o": ["Kehidupan Darat", "Kehidupan Laut", "Aksi Iklim", "Kemitraan Global"],
+      "a": 0
+    },
+    {
+      "cat": "SDGs",
+      "q": "Tujuan ke-17 SDGs adalah...",
+      "o": ["Kemitraan Global", "Kehidupan Laut", "Energi Bersih", "Kesetaraan Gender"],
+      "a": 0
+    }
+  ]
+}
