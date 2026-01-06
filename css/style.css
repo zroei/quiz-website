@@ -1,0 +1,246 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Button Styles */
+.duo-btn {
+    position: relative;
+    border-bottom: 5px solid rgba(0,0,0,0.2);
+    transition: all 0.1s ease;
+}
+
+.duo-btn:active:not(:disabled) {
+    transform: translateY(4px);
+    border-bottom-width: 0;
+}
+
+.duo-btn:hover:not(:disabled) {
+    filter: brightness(1.05);
+}
+
+.btn-green { 
+    background: linear-gradient(145deg, #58cc02, #46a302);
+    border-color: #46a302; 
+    color: white; 
+}
+
+.btn-blue { 
+    background: linear-gradient(145deg, #1cb0f6, #1899d6);
+    border-color: #1899d6; 
+    color: white; 
+}
+
+.btn-red { 
+    background: linear-gradient(145deg, #ff4b4b, #d43f3f);
+    border-color: #d43f3f; 
+    color: white; 
+}
+
+.btn-gray { 
+    background: #f7f7f7; 
+    border: 2px solid #e5e5e5; 
+    border-bottom: 5px solid #e5e5e5; 
+    color: #afafaf; 
+}
+
+.btn-purple { 
+    background: linear-gradient(145deg, #a855f7, #7e22ce);
+    border-color: #7e22ce; 
+    color: white; 
+}
+
+/* Option Items */
+.option-item {
+    border: 2px solid #e5e5e5;
+    border-bottom: 5px solid #e5e5e5;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.option-item:hover:not(.selected):not(.correct):not(.wrong) {
+    border-color: #c5c5c5;
+    background-color: #f9f9f9;
+    transform: translateY(-2px);
+}
+
+.option-item.selected {
+    border-color: #84d8ff;
+    background: linear-gradient(145deg, #ddf4ff, #c9ecff);
+    color: #1899d6;
+    transform: translateY(-2px);
+}
+
+.option-item.correct {
+    border-color: #58cc02;
+    background: linear-gradient(145deg, #d7ffb8, #c4ff9c);
+    color: #46a302;
+}
+
+.option-item.wrong {
+    border-color: #ff4b4b;
+    background: linear-gradient(145deg, #ffdfe0, #ffc9cb);
+    color: #d43f3f;
+}
+
+/* Watermark */
+.watermark {
+    position: absolute;
+    font-size: 10px;
+    font-weight: 800;
+    opacity: 0.15;
+    pointer-events: none;
+    user-select: none;
+    text-transform: uppercase;
+    z-index: 0;
+}
+
+/* Timer Animation */
+@keyframes pulse-timer {
+    0%, 100% { 
+        transform: scale(1); 
+        color: #ff4b4b; 
+    }
+    50% { 
+        transform: scale(1.1); 
+        color: #b80000; 
+    }
+}
+
+.timer-critical {
+    animation: pulse-timer 0.5s infinite !important;
+    background: linear-gradient(145deg, #ff4b4b, #b80000) !important;
+    color: white !important;
+}
+
+/* Sticky Footer */
+.sticky-footer {
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.05);
+    z-index: 10;
+}
+
+/* Tutorial Dropdown */
+.tutorial-dropdown {
+    transition: all 0.3s ease;
+}
+
+#tutorial-content {
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+}
+
+#tutorial-content.show {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pack Selector */
+.pack-option {
+    padding: 8px 4px;
+    border: 2px solid #e5e5e5;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: white;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.pack-option:hover {
+    border-color: #a855f7;
+    transform: translateY(-2px);
+}
+
+.pack-option.selected {
+    border-color: #a855f7;
+    background: linear-gradient(145deg, #a855f7, #7e22ce);
+    color: white;
+    box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+    .option-item {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+    
+    .duo-btn {
+        font-size: 16px;
+        padding: 14px;
+    }
+    
+    #q-text {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+    .option-item {
+        padding: 14px 20px;
+        font-size: 15px;
+    }
+    
+    #q-text {
+        font-size: 20px;
+    }
+}
+
+/* Loading Animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c5c5c5;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a5a5a5;
+}
